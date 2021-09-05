@@ -1,0 +1,65 @@
+#gestore microservizi
+
+#una volta fermati eliminare i container
+
+version: '3.9'
+services:
+  notifiche:
+    build: notifiche/.
+    container_name: notifiche
+    restart: 'no'
+    environment:
+      - service_name=notifiche
+    #volumes:
+    #  - /home/ubuntu/notifiche/data:/home/data
+    depends_on:
+      service_provider:
+        condition: service_started
+  timbrature:
+    build:  timbrature/.
+    container_name: timbrature
+    restart: 'no'
+    environment:
+      - service_name=timbrature
+    #volumes:
+    #  - /home/ubuntu/timbrature/data:/home/data
+    depends_on:
+       service_provider:
+        condition: service_started
+  stampa_sensibile:
+    build: stampa_sensibile/.
+    container_name: stampa_sensibile
+    restart: 'no'
+    environment:
+      - service_name=stampa_sensibile
+    #volumes:
+    #  - /home/ubuntu/stampa_sensibile/data:/home/data
+    depends_on:
+      service_provider:
+        condition: service_started
+  service_provider:
+    build: service_provider/.
+    container_name: service_provider
+    restart: 'no'
+    ports:
+      - "5000:5000"
+    environment:
+      - porta=5000
+    #volumes:
+    #  - /home/ubuntu/notifiche/data:/home/data
+
+
+#docker-compose -f docker-compose.yml up --build --no-start
+
+#docker-compose -f docker-compose.yml up -d --- per il background
+
+#docker logs nomecontainer
+#docker ps
+
+
+#docker exec -it
+#docker exec -it de1f7fc25641 sh
+# curl -H "Content-Type: application/json" -d '{"username":"value1", "location":"value2"}' -X POST http://timbrature:5000
+
+#docker
+# docker attach service_provider

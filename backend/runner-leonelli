@@ -1,0 +1,13 @@
+sudo docker-compose -f 1C_8001.yml up --build --no-start
+
+sudo docker-compose -f 1C_8001.yml up -d
+
+
+sudo docker-compose -f docker-compose.yml up --build --no-start
+sudo docker-compose -f docker-compose.yml up -d
+
+
+sudo kill -9 `jobs -ps`
+sudo docker system prune -a
+
+sudo docker stats | grep ....

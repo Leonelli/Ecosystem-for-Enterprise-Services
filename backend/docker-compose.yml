@@ -1,0 +1,14 @@
+#microservizi
+
+version: "3.9"
+services:
+  service_provider:
+    build: ""
+    command: python app/sp.py
+    restart: 'no'
+    environment:
+        PORT: 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/python-flask

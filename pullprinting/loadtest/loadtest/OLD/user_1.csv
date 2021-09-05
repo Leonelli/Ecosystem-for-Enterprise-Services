@@ -1,0 +1,4 @@
+timeStamp;elapsed;label;responseCode;responseMessage;threadName;dataType;success;bytes;sentBytes;grpThreads;allThreads;URL;Latency;IdleTime;Connect
+1574432832282;1412;JobList;200;OK;BackendNode 1-1;text;true;122997;444;1;1;http://www.google.com/cloudprint/jobs?status=IN_PROGRESS&printerid=a8d6c750-f342-f616-5a67-9188eacfdee2&limit=200&printerid=a8d6c750-f342-f616-5a67-9188eacfdee2;1385;0;55
+1574432834102;3144;PrinterList;200;OK;BackendNode 1-1;text;true;5795;284;1;1;https://pullprinting.fbk.eu/list_printer?access_token=ya29.Il-yB0pCQmMAQuYe4VT3T-lUMVTMDVj-jhq44e-LCypNaphFoe1s62x-0NHfoGBZEAts7hICPKKYMjrKNWtY1zHdZUUDmezxCtAlS7hfuwFrauEWffNT9CzVrw_7gPFiUw;3144;0;361
+1574432837247;7779;PrintNoCIE;200;OK;BackendNode 1-1;text;true;449;990;1;1;https://pullprinting.fbk.eu/print_token_easy;7779;0;42

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:text="Microservices list:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/title_microservices"/>
+    <Button
+            android:text="apertura uffici"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/microservice1" tools:visibility="gone"/>
+    <Button
+            android:text="firma elettronica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/microservice2" tools:visibility="gone"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="mensa" android:id="@+id/microservice3"
+            tools:visibility="gone"/>
+    <Button
+            android:text="notifiche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/microservice4" tools:visibility="gone"/>
+    <Button
+            android:text="parcheggio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/microservice5" tools:visibility="gone"/>
+    <Button
+            android:text="stampa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/microservice6" tools:visibility="gone"/>
+    <Button
+            android:text="stampa_sensibile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/microservice7" tools:visibility="gone"/>
+    <Button
+            android:text="timbrature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/microservice8" tools:visibility="gone"/>
+</LinearLayout>

@@ -1,0 +1,64 @@
+version: '3'
+services:
+  c1_8001:
+    build: ../../../Downloads/temp-2
+    container_name: c1_8001
+    restart: 'no'
+    environment:
+      - CLIENT_ID=1
+      - IP=10.20.30.15
+      - PORT=8001
+    volumes:
+      - /home/ubuntu/test_raspi/data:/home/data
+  c2_8001:
+    build: ../../../Downloads/temp-2
+    container_name: c2_8001
+    restart: 'no'
+    environment:
+      - CLIENT_ID=2
+      - IP=10.20.30.15
+      - PORT=8001
+    volumes:
+      - /home/ubuntu/test_raspi/data:/home/data
+    depends_on:
+      c1_8001:
+        condition: service_started
+  c3_8001:
+    build: ../../../Downloads/temp-2
+    container_name: c3_8001
+    restart: 'no'
+    environment:
+      - CLIENT_ID=3
+      - IP=10.20.30.15
+      - PORT=8001
+    volumes:
+      - /home/ubuntu/test_raspi/data:/home/data
+    depends_on:
+      c2_8001:
+        condition: service_started
+  c4_8001:
+    build: ../../../Downloads/temp-2
+    container_name: c4_8001
+    restart: 'no'
+    environment:
+      - CLIENT_ID=4
+      - IP=10.20.30.15
+      - PORT=8001
+    volumes:
+      - /home/ubuntu/test_raspi/data:/home/data
+    depends_on:
+      c3_8001:
+        condition: service_started
+  c5_8001:
+    build: ../../../Downloads/temp-2
+    container_name: c5_8001
+    restart: 'no'
+    environment:
+      - CLIENT_ID=5
+      - IP=10.20.30.15
+      - PORT=8001
+    volumes:
+      - /home/ubuntu/test_raspi/data:/home/data
+    depends_on:
+      c4_8001:
+        condition: service_started

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  c1_8001:
+    build: ../../../Downloads/temp-2
+    container_name: c1_8001
+    restart: 'no'
+    environment:
+      - CLIENT_ID=1
+      - IP=10.20.30.15
+      - PORT=8001
+    volumes:
+      - /home/ubuntu/test_raspi/data:/home/data

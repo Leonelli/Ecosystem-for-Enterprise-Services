@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".CieTokenActivity"
+            android:label="CieTokenActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".CieAuth"
+            android:label="@string/title_activity_cie_auth"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Printer_list"
+            android:label="Lista Stampanti"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QrReader"
+            android:label="QrCode Reader" />
+        <activity
+            android:name=".Stampa"
+            android:label="@string/title_activity_stampa"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TokenActivity"
+            android:label="FBK Pull Printing" />
+        <activity
+            android:name=".MainActivity"
+            android:label="FBK Pull Printing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+    </application>
+
+</manifest>
